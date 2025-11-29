@@ -4,12 +4,13 @@ import dotenv from "dotenv";
 dotenv.config();
 import connectDB from "./db.js";
 import routerApi from "./router.js";
+import cookieParser from "cookie-parser";
 
 const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors());
-
+app.use(cookieParser())
 
 // API routes
 app.use("/api/v1", routerApi);

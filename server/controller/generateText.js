@@ -4,7 +4,7 @@ export default async function GenerateText(req,res){
     const {question} = req.body //get the question from the req.body
 
     const ai = new GoogleGenAI({ apiKey: process.env.GENAIAPIKEY });
-    async function main() {
+
         const response = await ai.models.generateContent({
             model: "gemini-2.0-flash",
             contents: question
@@ -14,7 +14,3 @@ export default async function GenerateText(req,res){
             Answer: response.text
         })
     }
-
-    await main();
-}
-
