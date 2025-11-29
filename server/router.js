@@ -9,6 +9,7 @@ import Login from "./controller/Login.js";
 import SendOtp from "./controller/SendOtp.js";
 import verifyJwtToken  from "./utils/verifyJwtToken.js";
 import verifyOtp from "./controller/verifyOtp.js";
+import logout from "./controller/logout.js";
 
 
 
@@ -20,6 +21,7 @@ router.post('/registerPage', RegisterPage);
 router.post("/login", Login);
 router.post("/sendOtp", verifyJwtToken, SendOtp); // JWT Middleware 
 router.post("/verifyOtp", verifyJwtToken, verifyOtp); // JWT Middleware 
+router.post("/logout", logout)
 
 
 export default router;
