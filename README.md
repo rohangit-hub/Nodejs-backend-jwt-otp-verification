@@ -1,5 +1,5 @@
 
-# Imagify Backend (Express + MongoDB)
+# Backend (Express + MongoDB) - JWT LOGIN/LOGOUT - OTP VERIFICATION
 
 A lightweight Node.js/Express backend that supports user registration/login with JWT (via httpOnly cookies), email-based OTP verification using Nodemailer, and a simple text-generation endpoint powered by Google Generative AI. 
 
